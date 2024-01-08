@@ -18,6 +18,7 @@ resource "aws_neptune_cluster" "default" {
   preferred_backup_window = "07:00-09:00"
   skip_final_snapshot = true
   apply_immediately   = true
+  vpc_security_group_ids = "sg-07b333500eb989f51"
 }
 
 # Generating a Neptune DB instance associated with the cluster
@@ -27,4 +28,5 @@ resource "aws_neptune_cluster_instance" "default" {
   instance_class = "db.serverless"
   engine         = "neptune"
   apply_immediately = true
+  neptune_parameter_group_name = "default.neptune1.2"
 }
