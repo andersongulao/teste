@@ -23,7 +23,7 @@ resource "aws_neptune_cluster" "default" {
 # Generating a Neptune DB instance associated with the cluster
 resource "aws_neptune_cluster_instance" "default" {
   identifier  = var.cluster_instance
-  cluster_identifier = aws_neptune_cluster.example.id
+  cluster_identifier = aws_neptune_cluster.default.id
   instance_class = "db.serverless"
   engine         = "neptune"
   apply_immediately = true
