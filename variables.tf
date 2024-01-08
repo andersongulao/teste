@@ -8,7 +8,7 @@ variable "region" {
 
 variable "vpc" {
   description = "AWS VPC"
-  default     = "10.213.10.0/24""
+  default     = "10.213.10.0/24"
 }
 
 variable "cluster_identifier" {
