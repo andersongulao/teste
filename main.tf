@@ -14,7 +14,7 @@ provider "aws" {
 resource "aws_neptune_cluster" "default" {
   cluster_identifier  = var.cluster_identifier
   engine              = "neptune"
-  engine_version      = "1.2.0.1"
+  engine_version      = "1.2.0.2"
   backup_retention_period = 5
   preferred_backup_window = "07:00-09:00"
   skip_final_snapshot = true
