@@ -4,6 +4,5 @@ import {
 }
 
 resource "aws_instance" "gulao" {
-  name = "hashi"
-  # (other resource arguments...)
+
 }
