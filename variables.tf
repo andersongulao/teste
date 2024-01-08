@@ -6,10 +6,10 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "vpc" {
-  description = "AWS VPC"
-  default     = "10.213.10.0/24"
-}
+#variable "vpc" {
+#  description = "AWS VPC"
+#  default     = "10.213.10.0/24"
+#}
 
 variable "cluster_identifier" {
   description = "Neptune cluster Identifier"
@@ -20,3 +20,9 @@ variable "cluster_instance" {
   description = "AWS Neptune Cluster Instance"
   default     = "ons-graph-instance-gulao-1"
 }
+
+variable "tag" {
+  description = "Tag Solution ONS"
+  default = "CapacidadesDigitais"
+}
+
