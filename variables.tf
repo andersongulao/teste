@@ -13,10 +13,10 @@ variable "vpc" {
 
 variable "cluster_identifier" {
   description = "Neptune cluster Identifier"
-  default     = "ons-graph"
+  default     = "ons-gulao"
 }
 
 variable "cluster_instance" {
   description = "AWS Neptune Cluster Instance"
-  default     = "ons-graph-instance-1"
+  default     = "ons-graph-instance-gulao-1"
 }
