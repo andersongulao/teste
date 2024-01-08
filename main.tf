@@ -6,9 +6,9 @@ provider "aws" {
 }
 
 # Creating a VPC for Neptune to reside
-resource "aws_vpc" "default" {
-  cidr_block = var.vpc
-}
+#resource "aws_vpc" "default" {
+#  cidr_block = var.vpc
+#}
 
 # Establishing a Neptune DB cluster
 resource "aws_neptune_cluster" "default" {
