@@ -3,10 +3,10 @@
 
 output "neptune_endpoint" {
   description = "The connection endpoint for the Neptune DB instance"
-  value       = aws_neptune_cluster_instance.example.endpoint
+  value       = aws_neptune_cluster_instance.default.endpoint
 }
 
 output "neptune_reader_endpoint" {
   description = "The reader endpoint for the Neptune DB instance"
-  value       = aws_neptune_cluster.example.reader_endpoint
+  value       = aws_neptune_cluster.default.reader_endpoint
 }
