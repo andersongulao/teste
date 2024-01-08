@@ -22,8 +22,12 @@ resource "aws_neptune_cluster" "default" {
   #vpc_security_group_ids = ["sg_netptune"]
   neptune_subnet_group_name = "sg-privado"
   neptune_cluster_parameter_group_name = "default.neptune1.2"
+  iam_roles = ["AWSGlueServiceRoleDefault"]
   
-  serverless_v2_scaling_configuration {}
+  serverless_v2_scaling_configuration {
+    min_capacity : 1
+    max_capacity : 4
+  }
 }
 
 # Generating a Neptune DB instance associated with the cluster
