@@ -35,11 +35,11 @@ resource "aws_neptune_cluster_instance" "default" {
   publicly_accessible = false
   writer = true
   auto_minor_version_upgrade = true
-  tags :
+  tags = 
     {
       Solution : var.tag
     }
-  tags_all :
+  tags_all = 
     {
       Solution : var.tag
     }
