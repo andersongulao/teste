@@ -21,7 +21,7 @@ resource "aws_neptune_cluster" "default" {
   apply_immediately   = true
   #vpc_security_group_ids = ["sg_netptune"]
   neptune_subnet_group_name = "sg-privado"
-  neptune_cluster_parameter_group_name = "default.neptune1.2"
+  neptune_cluster_parameter_group_name = "default.neptune1.3"
   iam_roles = ["arn:aws:iam::874438869694:role/AWSGlueServiceRoleDefault"]
   #iam_database_authentication_enabled = true  
   serverless_v2_scaling_configuration {
@@ -35,7 +35,7 @@ resource "aws_neptune_cluster_instance" "default" {
   identifier  = var.cluster_instance
   cluster_identifier = aws_neptune_cluster.default.id
   instance_class = "db.serverless"
-  neptune_parameter_group_name = "default.neptune1.2"
+  neptune_parameter_group_name = "default.neptune1.3"
   engine         = "neptune"
   apply_immediately = true
   availability_zone = "us-east-1c"
