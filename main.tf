@@ -18,6 +18,8 @@ resource "aws_neptune_cluster" "default" {
   preferred_backup_window = "07:00-09:00"
   skip_final_snapshot = true
   apply_immediately   = true
+  vpc_security_group_ids = "sg_netptune"
+  neptune_subnet_group_name = "sg-privado"
 }
 
 # Generating a Neptune DB instance associated with the cluster
@@ -33,6 +35,4 @@ resource "aws_neptune_cluster_instance" "default" {
   auto_minor_version_upgrade = true
   tags = {Solution : var.tag}
   tags_all = {Solution : var.tag}
-  vpc_security_group_ids = ["sg_netptune"]
-  neptune_subnet_group_name = "sg-privado"
   }
