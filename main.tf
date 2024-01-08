@@ -25,8 +25,8 @@ resource "aws_neptune_cluster" "default" {
   iam_roles = ["AWSGlueServiceRoleDefault"]
   
   serverless_v2_scaling_configuration {
-    min_capacity : 1,
-    max_capacity : 4
+    min_capacity = 1
+    max_capacity = 4
   }
 }
 
