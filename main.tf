@@ -14,7 +14,7 @@ provider "aws" {
 resource "aws_neptune_cluster" "default" {
   cluster_identifier  = var.cluster_identifier
   engine              = "neptune"
-  engine_version      = "1.2.0.2"
+  #engine_version      = "1.2.0.2"
   backup_retention_period = 5
   preferred_backup_window = "07:00-09:00"
   skip_final_snapshot = true
@@ -22,7 +22,8 @@ resource "aws_neptune_cluster" "default" {
   #vpc_security_group_ids = ["sg_netptune"]
   neptune_subnet_group_name = "sg-privado"
   neptune_cluster_parameter_group_name = "default.neptune1.2"
-
+  
+  serverless_v2_scaling_configuration {}
 }
 
 # Generating a Neptune DB instance associated with the cluster
