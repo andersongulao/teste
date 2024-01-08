@@ -29,7 +29,7 @@ resource "aws_neptune_cluster_instance" "default" {
   instance_class = "db.serverless"
   engine         = "neptune"
   apply_immediately = true
-  neptune_parameter_group_name = "default.neptune1.2"
+  #neptune_parameter_group_name = "default.neptune1.2"
   availability_zone = "us-east-1c"
   publicly_accessible = false
   auto_minor_version_upgrade = true
