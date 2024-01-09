@@ -15,11 +15,12 @@ resource "aws_sagemaker_notebook_instance" "aws-neptune-ons-graph" {
   tags = {
     aws-neptune-cluster-id  = aws_neptune_cluster.default.id
     aws-neptune-resource-id = aws_neptune_cluster.default.cluster_resource_id
-    
+    Solution : var.tag
   }
   tags_all = {
     aws-neptune-cluster-id  = aws_neptune_cluster.default.id
     aws-neptune-resource-id = aws_neptune_cluster.default.cluster_resource_id
+    Solution : var.tag
   }
   volume_size = 10
   instance_metadata_service_configuration {
