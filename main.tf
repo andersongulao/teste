@@ -15,7 +15,7 @@ resource "aws_neptune_cluster" "default" {
   cluster_identifier  = var.cluster_identifier
   engine              = "neptune"
   engine_version      = "1.3.0.0"
-  backup_retention_period = 5
+  backup_retention_period = 1
   preferred_backup_window = "07:00-09:00"
   skip_final_snapshot = true
   apply_immediately   = true
@@ -23,10 +23,11 @@ resource "aws_neptune_cluster" "default" {
   neptune_subnet_group_name = "sg-privado"
   neptune_cluster_parameter_group_name = "default.neptune1.3"
   iam_roles = ["arn:aws:iam::874438869694:role/AWSGlueServiceRoleDefault"]
-  #iam_database_authentication_enabled = true  
+  tags = {Solution : var.tag}
+  tags_all = {Solution : var.tag}
   serverless_v2_scaling_configuration {
     min_capacity = 1
-    max_capacity = 4
+    max_capacity = 2.5
   }
 }
 
