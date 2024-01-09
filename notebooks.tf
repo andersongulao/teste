@@ -14,11 +14,12 @@ resource "aws_sagemaker_notebook_instance" "aws-neptune-ons-graph" {
   subnet_id                    = "subnet-08716995e42141384"
   tags = {
     aws-neptune-cluster-id  = "ons-graph"
-    aws-neptune-resource-id = "cluster-2RONECLFWXLNR7KJWVIJJRHA4A"
+    aws-neptune-resource-id = aws_neptune_cluster.ons-graph.cluster_resource_id
+    
   }
   tags_all = {
     aws-neptune-cluster-id  = "ons-graph"
-    aws-neptune-resource-id = "cluster-2RONECLFWXLNR7KJWVIJJRHA4A"
+    aws-neptune-resource-id = aws_neptune_cluster.ons-graph.cluster_resource_id
   }
   volume_size = 10
   instance_metadata_service_configuration {
