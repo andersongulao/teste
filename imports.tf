@@ -3,7 +3,7 @@
 #  id = "ons-graph-instance-1"
 #}
 
-import {
-  to = aws_sagemaker_notebook_instance.example
-  id = "aws-neptune-ons-graph"
-}
+#import {
+#  to = aws_sagemaker_notebook_instance.example
+#  id = "aws-neptune-ons-graph"
+#}
