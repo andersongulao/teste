@@ -7,7 +7,7 @@ resource "aws_sagemaker_notebook_instance" "aws-neptune-ons-graph" {
   kms_key_id                   = null
   lifecycle_config_name        = "aws-neptune-ons-graph-DEFAULT-LC"
   name                         = "aws-neptune-ons-graph"
-  platform_identifier          = "notebook-al1-v1"
+  platform_identifier          = "notebook-al2-v1"
   role_arn                     = "arn:aws:iam::874438869694:role/AWSNeptuneNotebookRole-ons-graph"
   root_access                  = "Disabled"
   security_groups              = ["sg-0e44842eea16d6ca5"]
